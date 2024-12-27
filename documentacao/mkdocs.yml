@@ -1,0 +1,31 @@
+site_name: "Meu Projeto de Documentação"
+theme:
+  name: 'material'  # Usando o tema Material for MkDocs
+  logo: 'images/logo.png'  # Se quiser adicionar um logo (opcional)
+  favicon: 'images/favicon.ico'  # Se quiser adicionar um favicon (opcional)
+  features:
+    - navigation.expand  # Para expandir automaticamente as seções no menu lateral
+
+# Definindo a navegação lateral
+nav:
+  - Início: index.md  # Página inicial (crie o index.md para a introdução)
+  - Javascript:
+      - "Dia 01": ./javascript/Dia01.md
+      - "Dia 02": ./javascript/Dia02.md
+      - "Dia 03": ./javascript/Dia03.md
+      - "Dia 05": ./javascript/Dia05.md
+      - "Dia 06": ./javascript/Dia06.md
+      - "Dia 07": ./javascript/Dia07.md
+      - "Dia 08": ./javascript/Dia08.md
+      - "Dia 09": ./javascript/Dia09.md                               
+  - Typescript:
+      - "Definição e Compilação": ./typescript/Typescript.md
+      - "Modificando o Compiler": ./typescript/Typescript02.md
+      - "Os tipos de Dados": ./typescript/Typescript03.md
+      - "Modificadores de Acesso": ./typescript/Typescript04.md
+      - "Tuplas e Arrays": ./typescript/Typescript04.md
+
+# Configurações adicionais (exemplo)
+markdown_extensions:
+  - toc:
+      permalink: true  # Permite links permanentes para os itens do TOC (Tabela de 
