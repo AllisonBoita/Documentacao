@@ -23,8 +23,11 @@ nav:
       - "Modificando o Compiler": ./typescript/Typescript02.md
       - "Os tipos de Dados": ./typescript/Typescript03.md
       - "Modificadores de Acesso": ./typescript/Typescript04.md
-      - "Tuplas e Arrays": ./typescript/Typescript04.md
-
+      - "Tuplas e Arrays": ./typescript/Typescript05.md
+      - "Tipos e Objetos": ./typescript/Typescript06.md
+      - "Dias 04 e 05": ./typescript/Typescript07.md
+      - "Dias 06 e 07": ./typescript/Typescript08.md                     
+      - "Complemento": ./typescript/Typescript09.md
 # Configurações adicionais (exemplo)
 markdown_extensions:
   - toc:
