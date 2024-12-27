@@ -10,10 +10,10 @@ theme:
 nav:
   - Início: index.md  # Página inicial (crie o index.md para a introdução)
   - Javascript:
-      - "Dia 01": ./javascript/Dia01.md
-      - "Dia 02": ./javascript/Dia02.md
-      - "Dia 03": ./javascript/Dia03.md
-      - "Dia 05": ./javascript/Dia05.md
+      - "Introdução ao Javascript": ./javascript/Javascript.md
+      - "Variaveis e Constantes": ./javascript/Javascript02.md
+      - "Tipos de Dados": ./javascript/Javascript03.md
+      - "Tipagem e Conversões": ./javascript/Javascript04.md
       - "Dia 06": ./javascript/Dia06.md
       - "Dia 07": ./javascript/Dia07.md
       - "Dia 08": ./javascript/Dia08.md
