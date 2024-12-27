@@ -25,9 +25,10 @@ nav:
       - "Modificadores de Acesso": ./typescript/Typescript04.md
       - "Tuplas e Arrays": ./typescript/Typescript05.md
       - "Tipos e Objetos": ./typescript/Typescript06.md
-      - "Dias 04 e 05": ./typescript/Typescript07.md
-      - "Dias 06 e 07": ./typescript/Typescript08.md                     
+      - "Aprofundamento: Tópicos Avançados": ./typescript/Typescript07.md
+      - "Explorando Conceitos Avançados": ./typescript/Typescript08.md                     
       - "Complemento": ./typescript/Typescript09.md
+ 
 # Configurações adicionais (exemplo)
 markdown_extensions:
   - toc:
