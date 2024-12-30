@@ -17,7 +17,10 @@ nav:
       - "Dia 06": ./javascript/Dia06.md
       - "Dia 07": ./javascript/Dia07.md
       - "Dia 08": ./javascript/Dia08.md
-      - "Dia 09": ./javascript/Dia09.md                               
+      - "Dia 09": ./javascript/Dia09.md
+      - "Dia 10": ./javascript/Dia10.md
+      - "Dia 11": ./javascript/Dia11.md
+      - "Dia 12": ./javascript/Dia12.md                                                 
   - Typescript:
       - "Definição e Compilação": ./typescript/Typescript.md
       - "Modificando o Compiler": ./typescript/Typescript02.md
