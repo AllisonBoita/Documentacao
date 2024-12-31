@@ -1,4 +1,4 @@
-### Modificadores de Acesso no TypeScript
+### 🔒 Modificadores de Acesso no TypeScript
 
 | Modificador  | Acesso                                              | Uso Principal                                     |
 |--------------|-----------------------------------------------------|--------------------------------------------------|
@@ -6,7 +6,17 @@
 | **`private`** | Acessível apenas dentro da própria classe.           | Garante encapsulamento completo da propriedade/método. |
 | **`protected`** | Acessível dentro da classe e de suas subclasses.    | Permite controle em hierarquias de herança.      |
 
-#### Exemplos
+---
+
+#### 💡 Exemplos
+
+Em **TypeScript**, podemos usar os modificadores de acesso para controlar a visibilidade de propriedades e métodos dentro das classes.
+
+Abaixo, temos um exemplo que ilustra os três modificadores:
+
+- **`public`**: A propriedade ou método é acessível de qualquer lugar.
+- **`private`**: A propriedade ou método só pode ser acessado dentro da própria classe.
+- **`protected`**: A propriedade ou método pode ser acessado dentro da classe e de suas subclasses.
 
 ```typescript
 class Example {
@@ -42,11 +52,3 @@ console.log(example.publicProperty); // OK
 // console.log(example.privateProperty); // Erro: 'privateProperty' é privado
 // console.log(example.protectedProperty); // Erro: 'protectedProperty' é protegido
 example.publicMethod(); // OK
-
-### Resumo de Acessibilidade
-
-| Contexto                  | `public`   | `private` | `protected` |
-|---------------------------|------------|-----------|-------------|
-| Dentro da própria classe  | ✔️         | ✔️        | ✔️          |
-| Em subclasses             | ✔️         | ❌        | ✔️          |
-| Fora da classe            | ✔️         | ❌        | ❌          |
