@@ -1,16 +1,21 @@
-Resumo do dia 13
+# 📅 Resumo do Dia 13 - IF e ELSE
+
 No dia 13, mergulhamos no conceito fundamental de controle de fluxo em JavaScript através do uso de estruturas condicionais if, else if e else. Essas estruturas nos permitem tomar decisões no código baseando-nos em condições específicas, levando a diferentes resultados de acordo com os dados que temos.
 
-Conceitos Chave Abordados:
+---
+
+### 🖥️ **Conceitos Chave Abordados**
+
 Estrutura if: Usada para testar uma condição inicial. Se a condição for verdadeira (true), o bloco de código dentro do if será executado.
 
 Estrutura else: Anexada a um if, a cláusula else captura qualquer situação que não atenda à condição do if. Seu bloco de código é executado se a condição testada pelo if for falsa (false).
 
 Estrutura else if: Usada para testar múltiplas condições em sequência. Se a condição do if inicial for falsa, o else if oferece uma nova condição a ser testada antes de possivelmente recorrer ao else.
 
-Exemplo Prático:
+### 📂 **Exemplo Prático**
 O desafio proposto ilustra perfeitamente como usar essas estruturas para criar um sistema de avaliação baseado em pontuação:
 
+```javascript
 let grade = 92;
 
 if (grade >= 90) {
@@ -20,6 +25,7 @@ console.log('Muito Bom!');
 } else {
 console.log('Você pode melhorar :)');
 }
+```
 
 Neste exemplo, a pontuação (grade) é avaliada da seguinte forma:
 
@@ -29,5 +35,10 @@ else if (grade >= 75): Se a pontuação não for 90 ou mais (o que faz a condiç
 
 else: Se nenhuma das condições anteriores for verdadeira (a pontuação é menor que 75), "Você pode melhorar :)" é impresso.
 
-Importância:
+### ⚡ **Importância**
+
 Essa abordagem demonstra como podemos direcionar o fluxo do programa baseando-nos em condições e valores variáveis, o que é uma habilidade essencial no desenvolvimento de software. Entender e aplicar corretamente as estruturas condicionais permite a criação de programas dinâmicos e interativos que respondem de maneira diferente a diferentes entradas e situações.
+
+🔍 **Dica:** Sinta-se à vontade para experimentar com o código e explorar novas possibilidades. **A prática leva à perfeição**, e estarei aqui para ajudar em cada passo da jornada! 👨‍💻👩‍💻
+
+---

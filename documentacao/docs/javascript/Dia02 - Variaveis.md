@@ -1,4 +1,4 @@
-## 📦 **Variáveis** 
+# 📅 Resumo do Dia 2 - Variáveis
 
 - **O que são:** As **variáveis** são contêineres que armazenam valores de dados. Elas permitem etiquetar dados com nomes descritivos, facilitando sua referência e manipulação no código.
 
@@ -35,3 +35,5 @@
 - **Preferir `let` e `const`** em vez de **`var`** para declarar variáveis, devido ao escopo de bloco mais previsível e à prevenção de **redeclarações acidentais**.
   
 - **Usar `const`** para valores que sabemos que **não mudarão**, como **URLs de API**, **valores de configuração**, etc., para garantir a **imutabilidade** desses valores no código.
+
+

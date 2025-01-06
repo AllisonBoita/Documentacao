@@ -1,4 +1,6 @@
-## 🔢 2. Conversão de String para Número
+# 📅 Resumo do Dia 2 - Conversões
+
+## ✍️ 2. Conversão de String para Número
 
 JavaScript permite a conversão de strings para números, seja para operações matemáticas ou validações. Aqui estão os métodos mais comuns:
 

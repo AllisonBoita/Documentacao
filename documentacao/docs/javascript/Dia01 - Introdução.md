@@ -1,4 +1,4 @@
-# 📅 Resumo do Dia 1
+# 📅 Resumo do Dia 1 - Introdução ao Javascript
 
 ## **Introdução ao Desenvolvimento Web com JavaScript** 🚀
 

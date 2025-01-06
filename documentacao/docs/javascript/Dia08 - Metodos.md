@@ -1,3 +1,5 @@
+# 📅 Resumo do Dia 8 - Metodos
+
 ### 2. 🔠 Métodos em Strings
 As strings em JavaScript vêm equipadas com uma variedade de métodos úteis para manipulação e consulta.
 
