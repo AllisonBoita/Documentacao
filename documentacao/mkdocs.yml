@@ -10,17 +10,30 @@ theme:
 nav:
   - Início: index.md  # Página inicial (crie o index.md para a introdução)
   - Javascript:
-      - "Introdução ao Javascript": ./javascript/Javascript.md
-      - "Variaveis e Constantes": ./javascript/Javascript02.md
-      - "Tipos de Dados": ./javascript/Javascript03.md
-      - "Tipagem e Conversões": ./javascript/Javascript04.md
-      - "Dia 06": ./javascript/Dia06.md
-      - "Dia 07": ./javascript/Dia07.md
-      - "Dia 08": ./javascript/Dia08.md
-      - "Dia 09": ./javascript/Dia09.md
-      - "Dia 10": ./javascript/Dia10.md
-      - "Dia 11": ./javascript/Dia11.md
-      - "Dia 12": ./javascript/Dia12.md                                                 
+      - "Dia 01 - Introdução": ./javascript/Dia01 - Introdução.md
+      - "Dia 02 - Variaveis": ./javascript/Dia02 - Variaveis.md
+      - "Dia 04 - Tipos de Dados": ./javascript/Dia04 - Tipos de Dados.md
+      - "Dia 05 - Conversões": ./javascript/Dia05 - Conversões.md
+      - "Dia 05 - Tipagem": ./javascript/Dia05 - Tipagem Estatica e Dinâmica.md
+      - "Dia 06 - Operadores": ./javascript/Dia06 - Operadores.md
+      - "Dia 07 - Operadores de Comparação": ./javascript/Dia07 - Operadores de Comparação.md
+      - "Dia 08 - Metodos": ./javascript/Dia08 - Metodos.md
+      - "Dia 08 - Objetos e Keys": ./javascript/Dia08 - Objetos e Keys.md
+      - "Dia 08 - Template Literals": ./javascript/Dia08 - Template Literals.md
+      - "Dia 09 - Data": ./javascript/Dia09 - Trabalhando com Datas.md
+      - "Dia 10 - Arrays": ./javascript/Dia10 - Arrays.md
+      - "Dia 11 - Metodos de Arrays": ./javascript/Dia11 - Metodos de Arrays.md
+      - "Dia 12 - Arrays PT2": ./javascript/Dia12 - Avançando com Arrays.md
+      - "Dia 13 - IF e Else": ./javascript/Dia13 - IF e ELSE.md
+      - "Dia 14 - Operadores Lógicos": ./javascript/Dia14 - Operadores Lógicos e Nesting.md
+      - "Dia 15 - Condicionais e NOT": ./javascript/Dia15 - Condicionais e Operador NOT.md
+      - "Dia 16 - Operadores de Precedência": ./javascript/Dia16 - Operadores de Precedência.md
+      - "Dia 16 - Switch e Case": ./javascript/Dia16 - Switch Case.md
+      - "Dia 17 - Operadores Ternários": ./javascript/Dia17 - Operadores Ternários.md
+      - "Dia 17 - Truthy e Falsy": ./javascript/Dia17 - Truthy e Falsy.md
+      - "Dia 18 - Objetos": ./javascript/Dia18 - Objetos.md
+      - "Dia 19 - Funções e Rest": ./javascript/Dia19 - Funções e Rest.md
+      - "Dia 20 - Funções e Arrow": ./javascript/Dia20 - Funções e Arrow.md                                           
   - Typescript:
       - "Definição e Compilação": ./typescript/Typescript.md
       - "Modificando o Compiler": ./typescript/Typescript02.md

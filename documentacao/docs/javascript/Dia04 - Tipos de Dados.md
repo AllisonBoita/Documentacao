@@ -1,4 +1,4 @@
-# 📚 Resumo do Dia 4 - Tipos de Dados, Dados Primitivos e Dados de Referência em JavaScript
+# 📅 Resumo do Dia 4 - Tipos de Dados, Dados Primitivos e Dados de Referência em JavaScript
 
 No quarto dia da nossa jornada em JavaScript, exploramos os **tipos de dados disponíveis**, diferenciando entre **dados primitivos** e **dados de referência**. Este conhecimento é essencial para manipular dados de forma eficaz em nossos programas. Vamos revisar os conceitos-chave:
 

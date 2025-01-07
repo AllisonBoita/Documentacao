@@ -1,0 +1,5 @@
+## **Operadores Ternários:** 🚀
+
+O operador ternário é uma forma concisa de escrever uma instrução if-else. Sua sintaxe é condição ? expressão1 : expressão2.
+
+Se a condição for verdadeira, expressão1 é executada. Se for falsa, expressão2 é executada.
