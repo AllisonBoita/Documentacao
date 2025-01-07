@@ -1,4 +1,4 @@
-# 📅 Resumo do Dia 19 - Objetos em Javascript
+# 📅 Resumo do Dia 18 - Objetos em Javascript
 
 Objetos em JavaScript são estruturas de dados que permitem armazenar coleções de dados na forma de pares chave-valor. Eles são uma das principais formas de organizar e gerenciar dados e funcionalidades em JavaScript.
 
