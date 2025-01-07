@@ -35,15 +35,16 @@ nav:
       - "Dia 19 - Funções e Rest": ./javascript/Dia19 - Funções e Rest.md
       - "Dia 20 - Funções e Arrow": ./javascript/Dia20 - Funções e Arrow.md                                           
   - Typescript:
-      - "Definição e Compilação": ./typescript/Typescript.md
-      - "Modificando o Compiler": ./typescript/Typescript02.md
-      - "Os tipos de Dados": ./typescript/Typescript03.md
-      - "Modificadores de Acesso": ./typescript/Typescript04.md
-      - "Tuplas e Arrays": ./typescript/Typescript05.md
-      - "Tipos e Objetos": ./typescript/Typescript06.md
-      - "Aprofundamento: Tópicos Avançados": ./typescript/Typescript07.md
-      - "Explorando Conceitos Avançados": ./typescript/Typescript08.md                     
-      - "Complemento": ./typescript/Typescript09.md
+      - "Dia 01 - Introdução": ./typescript/Dia01 - Introdução.md
+      - "Dia 02 - Compiler": ./typescript/Dia02 - Typescript Compiler.md
+      - "Dia 03 - Tipos": ./typescript/Dia03 - Tipos no Typescript.md
+      - "Dia 04 - Modificadores": ./typescript/Dia04 - Modificadores de Acesso.md
+      - "Dia 05 - Arrays e Tuplas": ./typescript/Dia05 - Arrays e Tuples.md
+      - "Dia 06 - Objetos e Tipos": ./typescript/Dia06 - Objetos e Tipos.md
+      - "Dia 07 - Classes e Interfaces": ./typescript/Dia07 - Classes e Interfaces.md
+      - "Dia 07 - TSConfig": ./typescript/Dia07 - Configurações do TSConfig.md
+      - "Dia 08 - Readonly e Inheritance": ./typescript/Dia08 - Readonly e Inheritance.md
+      - "Dia 09 - Resumo": ./typescript/Dia09 - Resumo.md
  
 # Configurações adicionais (exemplo)
 markdown_extensions:

@@ -1,4 +1,6 @@
-# 🔧 Modificando o TypeScript Compiler
+# 📅 Resumo do Dia 2 - Typescript Compiler
+
+## 🔧 Modificando o TypeScript Compiler
 
 O **TypeScript Compiler** (ou **`tsc`**) é a ferramenta que converte o código TypeScript em JavaScript. Ele pode ser configurado de várias maneiras para adaptar o processo de compilação às necessidades de seu projeto. Além de usar a configuração padrão, é possível modificar e personalizar o comportamento do compilador por meio do arquivo **`tsconfig.json`**.
 
@@ -23,6 +25,6 @@ Além de usar as opções do **`tsconfig.json`**, você pode modificar o comport
 
 ---
 
-## ✅ Conclusão
+✨ **Conclusão do Dia**
 
 O **TypeScript Compiler** é altamente configurável, e você pode adaptar o processo de compilação às necessidades do seu projeto por meio do arquivo **`tsconfig.json`** ou modificando-o com plugins e ferramentas externas.

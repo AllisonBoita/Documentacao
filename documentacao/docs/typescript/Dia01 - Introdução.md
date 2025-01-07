@@ -1,4 +1,4 @@
-# 💻 O que é o TypeScript?
+# 📅 Resumo do Dia 1 - Introdução ao Typescript
 
 O **TypeScript** foi desenvolvido pela **Microsoft** e tem como principal objetivo ajudar a detectar erros durante o desenvolvimento, proporcionando uma experiência de codificação mais robusta e segura. O TypeScript permite que você escreva código mais estruturado e mantenha a escalabilidade de projetos grandes.
 
@@ -33,6 +33,6 @@ Sim, o **TypeScript é compilado**. Embora o código escrito em TypeScript tenha
 
 ---
 
-## 🔚 Conclusão
+✨ **Conclusão do Dia**
 
 O **TypeScript** oferece várias vantagens para desenvolvedores que buscam uma solução robusta e escalável para seus projetos JavaScript, proporcionando maior segurança através da tipagem e outras características. No entanto, ele exige um processo de compilação, onde o código escrito em TypeScript é transformado em JavaScript antes de ser executado.

@@ -1,4 +1,4 @@
-# 📚 Resumo do Dia 12: Técnicas Avançadas com Arrays em JavaScript
+# 📅 Resumo do Dia 12: Técnicas Avançadas com Arrays em JavaScript
 
 No dia 12, avançamos no estudo de **arrays** em JavaScript, concentrando-nos em técnicas avançadas como **concatenação de listas**, utilização de **métodos estáticos** e **manipulação de arrays aninhados** (nested arrays). Esses conceitos são essenciais para o manuseio eficiente de coleções de dados e estruturas de dados mais complexas.
 

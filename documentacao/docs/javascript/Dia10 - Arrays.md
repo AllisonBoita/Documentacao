@@ -1,4 +1,4 @@
-# 📚 Resumo do Dia 10: Arrays em JavaScript
+# 📅 Resumo do Dia 10: Arrays em JavaScript
 
 No décimo dia, exploramos o conceito de **Arrays** em JavaScript, uma estrutura de dados fundamental que permite armazenar múltiplos valores em uma única variável. Discutimos como acessar e modificar elementos de um **Array** para manipulação de dados. Aqui está um resumo detalhado:
 

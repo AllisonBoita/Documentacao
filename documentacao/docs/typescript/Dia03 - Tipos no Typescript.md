@@ -1,4 +1,4 @@
-# 🏷️ Os Tipos no TypeScript
+# 📅 Resumo do Dia 3 - Tipos no Typescript
 
 O **TypeScript** introduz **tipagem estática** ao JavaScript, permitindo que você defina tipos para variáveis, funções e objetos, o que pode ajudar a evitar muitos erros comuns. Ele oferece uma vasta gama de tipos predefinidos, bem como a possibilidade de criar tipos personalizados.
 
@@ -34,6 +34,6 @@ Em **TypeScript**, você pode definir tipos para objetos com propriedades espec�
 
 ---
 
-## ✅ Conclusão
+✨ **Conclusão do Dia**
 
 O sistema de tipos do **TypeScript** é uma poderosa ferramenta para melhorar a qualidade e a manutenção do código, ajudando a detectar erros antes da execução. Além dos tipos primitivos, o **TypeScript** oferece recursos como interfaces, tipos avançados e generics, permitindo uma grande flexibilidade na criação de tipos para os dados.

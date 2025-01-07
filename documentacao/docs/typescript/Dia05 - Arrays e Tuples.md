@@ -1,3 +1,5 @@
+# 📅 Resumo do Dia 5 - Arrays e Tuples
+
 ## 📚 Arrays
 
 Em TypeScript, um array pode ser definido de várias formas. A forma mais comum é especificando o tipo de seus elementos, como por exemplo:
@@ -69,6 +71,6 @@ No exemplo acima, a função `mostrarMensagem` não retorna nenhum valor, apenas
 
 ---
 
-## 🔚 Conclusão
+✨ **Conclusão do Dia**
 
 Em **TypeScript**, as **arrays** e **tuples** oferecem estruturas de dados flexíveis, permitindo a criação de coleções de dados com tipos fixos ou mistos. Os **Enums** tornam o código mais legível e organizam valores constantes de forma eficiente. O tipo de **retorno de funções** ajuda a garantir a consistência no que é esperado de uma função, enquanto **void** é usado para funções que não precisam retornar um valor.

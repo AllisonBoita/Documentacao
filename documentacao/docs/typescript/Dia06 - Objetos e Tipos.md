@@ -1,3 +1,5 @@
+# 📅 Resumo do Dia 6 - Objetos e Tipos
+
 ## 🏷️ Objetos
 
 Em **TypeScript**, objetos são usados para representar coleções de dados que podem ter diferentes propriedades, com cada uma podendo ter tipos específicos. Você pode definir tipos de objetos diretamente, ou usar interfaces e tipos para estruturar esses objetos.
@@ -97,6 +99,6 @@ As **interseções** são úteis quando você precisa combinar várias entidades
 
 ---
 
-## 📝 Conclusão
+✨ **Conclusão do Dia**
 
 Em **TypeScript**, os conceitos de **objetos**, **unknown**, **never**, **alias**, **union**, **literal** e **intersection** são fundamentais para criar tipos que tornam o código mais robusto, legível e seguro. Utilizando essas ferramentas, você pode definir comportamentos complexos e garantir que os dados sejam manipulados corretamente, com validações de tipos avançadas.

@@ -1,4 +1,4 @@
-# 📚 Resumo do Dia 11: Métodos de Arrays em JavaScript
+# 📅 Resumo do Dia 11: Métodos de Arrays em JavaScript
 
 No dia 11, exploramos em profundidade os **métodos de array** em JavaScript, focando em como eles nos permitem manipular, acessar e transformar dados dentro de **arrays**. Os métodos **slice** e **splice** foram os destaques, juntamente com as técnicas de **encadeamento (chaining)** e **aninhamento** de métodos para operações mais complexas.
 

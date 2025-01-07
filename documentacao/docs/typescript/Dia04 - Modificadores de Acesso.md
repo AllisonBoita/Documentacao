@@ -1,4 +1,6 @@
-### 🔒 Modificadores de Acesso no TypeScript
+# 📅 Resumo do Dia 4 - Modificadores de Acesso
+
+## 🔒 Modificadores de Acesso no TypeScript
 
 | Modificador  | Acesso                                              | Uso Principal                                     |
 |--------------|-----------------------------------------------------|--------------------------------------------------|
@@ -8,7 +10,7 @@
 
 ---
 
-#### 💡 Exemplos
+### 💡 Exemplos
 
 Em **TypeScript**, podemos usar os modificadores de acesso para controlar a visibilidade de propriedades e métodos dentro das classes.
 
@@ -52,3 +54,4 @@ console.log(example.publicProperty); // OK
 // console.log(example.privateProperty); // Erro: 'privateProperty' é privado
 // console.log(example.protectedProperty); // Erro: 'protectedProperty' é protegido
 example.publicMethod(); // OK
+```

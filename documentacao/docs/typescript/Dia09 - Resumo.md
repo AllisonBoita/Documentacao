@@ -1,3 +1,5 @@
+# 📅 Resumo do Dia 9 - Tipos no Typescript
+
 ## Tipos Literais
 
 Os **tipos literais** permitem que você defina um valor específico para uma variável, ao invés de apenas um tipo genérico como `string` ou `number`. Isso é útil quando você quer restringir um valor a um conjunto específico de opções.
@@ -259,3 +261,4 @@ class Dog extends Animal {
 const myDog = new Dog();
 myDog.speak(); // Dog barks
 ```
+

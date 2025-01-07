@@ -1,4 +1,4 @@
-## readOnly
+# 📅 Resumo do Dia 8 - Readonly e Inheritance
 
 O modificador `readonly` em TypeScript torna uma propriedade somente leitura, ou seja, uma vez definida, não pode ser alterada. Isso é útil quando você quer garantir que o valor de uma propriedade não seja modificado após a criação do objeto.
 
@@ -16,11 +16,9 @@ class Person {
         // this.name = newName; // Erro: A propriedade 'name' é somente leitura.
     }
 }
-
 ```
 
 ---
-
 
 ## Parâmetro do Constructor
 
