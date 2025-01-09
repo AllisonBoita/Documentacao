@@ -1,6 +1,6 @@
 # 📅 Resumo do Dia 5 - Conversões
 
-## ✍️ 2. Conversão de String para Número
+## ✍️ Conversão de String para Número
 
 JavaScript permite a conversão de strings para números, seja para operações matemáticas ou validações. Aqui estão os métodos mais comuns:
 
@@ -15,7 +15,7 @@ Valores como `"abc"` ou strings vazias retornam `NaN` (Not a Number), indicando 
 
 ---
 
-## ✍️ 3. Conversão de Número para String
+## ✍️ Conversão de Número para String
 
 Às vezes, é necessário converter números para strings, como em concatenações ou exibições. JavaScript oferece métodos simples para isso:
 
@@ -26,7 +26,7 @@ Valores como `"abc"` ou strings vazias retornam `NaN` (Not a Number), indicando 
 
 ---
 
-## 🔄 4. Conversão para Boolean
+## 🔄 Conversão para Boolean
 
 ### ✅ **Valores Truthy e Falsy**
 - **Falsy (convertidos para `false`):**  

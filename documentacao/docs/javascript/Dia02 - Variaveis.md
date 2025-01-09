@@ -4,7 +4,7 @@
 
 ### 📝 **Como declarar variáveis:**
 
-1. **`var`**: A forma mais antiga de declarar variáveis. Tem **escopo de função** e pode ser **redeclara** e **atualizada**.
+1. **`var`**: A forma mais antiga de declarar variáveis. Tem **escopo de função** e pode ser **redeclarada** e **atualizada**.
    
 2. **`let`**: Introduzido no **ES6 (ECMAScript 2015)**, permite declarar variáveis com **escopo de bloco**, ou seja, a variável existe apenas dentro do bloco onde foi declarada. Pode ser **atualizada**, mas **não redeclarada** no mesmo escopo.
 

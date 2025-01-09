@@ -7,7 +7,6 @@ Bem-vindo à nossa jornada de aprendizado em **JavaScript**! No **primeiro dia**
 ### 🖥️ **IDE do Visual Studio Code (VSCode)**
 
 - **O que é:** O **VSCode** é uma **Integrated Development Environment (IDE)**, ou seja, um ambiente de desenvolvimento integrado. Ele oferece **recursos avançados** para escrever, testar e depurar código de forma eficiente.
-- **Por que usamos:** Escolhemos o **VSCode** por sua **popularidade**, **interface amigável** e pela **grande quantidade de extensões** que facilitam o desenvolvimento de aplicações web.
 
 ### 📂 **Os 3 Arquivos Principais no Desenvolvimento Web**
 
@@ -34,7 +33,5 @@ Demonstramos como vincular os arquivos **`style.css`** e **`script.js`** ao noss
 ✨ **Conclusão do Dia 1**
 
 Este primeiro dia foi dedicado a estabelecer uma **base sólida** no desenvolvimento web com JavaScript. Familiarizamos com as **ferramentas** e **estruturas essenciais**, que servirão como alicerces para todos os nossos projetos futuros. 🚀
-
-🔍 **Dica:** Sinta-se à vontade para experimentar com o código e explorar novas possibilidades. **A prática leva à perfeição**, e estarei aqui para ajudar em cada passo da jornada! 👨‍💻👩‍💻
 
 ---
