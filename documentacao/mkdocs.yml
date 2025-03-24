@@ -45,6 +45,8 @@ nav:
       - 'Dia 07 - TSConfig': ./typescript/Dia07 - Configurações do TSConfig.md
       - 'Dia 08 - Readonly e Inheritance': ./typescript/Dia08 - Readonly e Inheritance.md
       - 'Dia 09 - Resumo': ./typescript/Dia09 - Resumo.md
+  - Mobile:    
+      - 'Dia 01 - Mobile': ./mobile/Aula02.md
 
 # Configurações adicionais (exemplo)
 markdown_extensions:
