@@ -72,16 +72,18 @@ Exemplo:
         android:allowBackup="true"
         android:theme="@style/Theme.MyApp">
         
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
     </application>
 </manifest>
 ```
+
 
 ## ViewGroups
 
