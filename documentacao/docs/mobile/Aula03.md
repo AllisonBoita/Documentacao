@@ -68,3 +68,28 @@ themes: define qual o tema padrão e o tema escuro.
 
 ### Criando o layout da activity
 
+ALT + INSERT
+
+android resource director
+selecionamos o layout.
+
+ALT + INSERT dnv
+
+layout resource file
+
+1. Primeiro colocamos o nome (padrão activity_main...)
+2. Root Element: padrão
+3. oK
+
+Arquivo criado.
+
+### Estilizando layout.
+
+Podemos clicar, arrastar e soltar.
+No text podemos modificar o texto (ao invés de fazer direto na activity)
+
+Voltando na activity vamos carregar o que fizemos no layout.
+
+setContentView(R.layout.activity_main) <!-- Carregando o layout -->
+<!-- Podemos apagar o texto adicionado anteriormente. -->
+
