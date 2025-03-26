@@ -54,4 +54,17 @@ usamos a TextView. -->
 
 view.setText("Olá Mundo")
 
+### Layout - Adicionando tudo em um arquivo exclusivo.
+
+Todo o código e views são adicionadas em um local e são apenas carregadas na activity
+
+./res
+
+drawable: permite colocar imagens
+mipmap: versões de icones diferentes
+values: cores disponíveis configuradas pro app
+strings: valores em strings que não são modificados.
+themes: define qual o tema padrão e o tema escuro.
+
+### Criando o layout da activity
 
