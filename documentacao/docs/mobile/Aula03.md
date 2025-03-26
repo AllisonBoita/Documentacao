@@ -93,3 +93,23 @@ Voltando na activity vamos carregar o que fizemos no layout.
 setContentView(R.layout.activity_main) <!-- Carregando o layout -->
 <!-- Podemos apagar o texto adicionado anteriormente. -->
 
+### Evoluindo com layout
+
+Existe uma serie de regras para atender o que se espera.
+
+Todos os componentes são views: desde a constraint layout até o textview...
+
+1. Sempre teremos um elemento raiz.
+
+Uma view não pode ter outras views.
+Para que a gente consiga utilizar uma view que receba outras devemos usar a ViewGroup
+
+ConstraintLayout é uma viewGroup
+
+![alt text](image-1.png)
+
+<!-- Constraint layout -->
+
+#### Posicionando view
+
+Podemos arrastar a view para onde desejarmos.
