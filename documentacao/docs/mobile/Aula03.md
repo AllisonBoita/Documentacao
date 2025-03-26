@@ -113,3 +113,6 @@ ConstraintLayout é uma viewGroup
 #### Posicionando view
 
 Podemos arrastar a view para onde desejarmos.
+
+Qualquer view que não tenha regra e fique dentro de uma viewgroup (constraint) ele fica em vermelho.
+
