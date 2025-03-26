@@ -30,3 +30,28 @@ Nele vamos abrir a tag e adicionar o seguinte
     <intent-filter>
 </activity>
 
+### Testando inicialização do APP
+
+A activity possui um ciclo de vida. Esse ciclo indica o momento em que a activity é criada, por exemplo.
+
+Na nossa MainActivity.kt
+
+override fun onCreate(savedInstanceState: Bundle?)
+super.onCreate(savedInstanceState) 
+
+Toast.makeText(this, "Bem vindo", Toast.LENGTH_SHORT).show()
+
+### Adicionando views na activity.
+
+Vamos remover o toast e adidionar o seguinte:
+
+val view = View(this) <!-- aqui ele pede um argumento necessário. -->
+setContentView(view)
+
+<!-- Para comportamentos mais específcios, por exemplo. adicionar texto
+
+usamos a TextView. -->
+
+view.setText("Olá Mundo")
+
+
