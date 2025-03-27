@@ -147,3 +147,12 @@ para adicionar o id adicionamos o
 --
 
 Quando se mudar algum ID utilizar atalho SHIFT F6 e ele renomeia em todos os pontos.
+
+### Aplicando margin
+
+Se trabalhamos com px ficamos sucessiveis a dispositivos variados. Podem apresentar diferenças.
+
+DP = Densidade de pixels
+
+significa que será uma unidade que fará um "pixel virtual". ou seja, ele calcula automaticamente pixels para se adaptar.
+
