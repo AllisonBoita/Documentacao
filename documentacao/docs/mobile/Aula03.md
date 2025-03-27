@@ -132,3 +132,18 @@ o match_parent cresce em relação ao tamanho do Posicionando
 
 o wrap_content cresce em relação ao conteudo
 
+--
+
+Quando não houver nenhuma constraint ele sempre fica grudado no topo.
+
+para separar adicionamos o seguinte:
+
+app:layout_constraintTop_toBottomOf="@id/textView"
+
+para adicionar o id adicionamos o 
+
+1. android:id="@+id/textView"
+
+--
+
+Quando se mudar algum ID utilizar atalho SHIFT F6 e ele renomeia em todos os pontos.
