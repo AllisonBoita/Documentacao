@@ -116,3 +116,19 @@ Podemos arrastar a view para onde desejarmos.
 
 Qualquer view que não tenha regra e fique dentro de uma viewgroup (constraint) ele fica em vermelho.
 
+#### Implementando namespace Layout
+
+Usar o método split no android studio, para ver o que acontece debaixo dos panos.
+
+Utilizamos o namespace app para chamar atributos específicos da View.
+
+Para apresentar o conteúdo apenas no preview, utilizamos o tools.
+
+android:text="Cesta de frutas"
+
+### Implementando Layout
+
+o match_parent cresce em relação ao tamanho do Posicionando
+
+o wrap_content cresce em relação ao conteudo
+
