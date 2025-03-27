@@ -156,3 +156,8 @@ DP = Densidade de pixels
 
 significa que será uma unidade que fará um "pixel virtual". ou seja, ele calcula automaticamente pixels para se adaptar.
 
+### Aplicando textSize
+
+Para o texto usamos o SP para aumentar ou não o tamanho da fonte.
+
+É bem semelhante ao DP porém esse SP facilita algumas questões de acessibilidade.
