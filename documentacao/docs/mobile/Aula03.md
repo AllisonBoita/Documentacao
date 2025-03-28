@@ -1,163 +1,63 @@
 ## Implementando Activity
 
-Não existe main, mas sim activity
+### Introdução
+- No desenvolvimento Android, não há um método `main`, mas sim uma Activity que serve como ponto de entrada para o aplicativo.
+- Uma Activity possui duas funções principais:
+  - **View:** Responsável pelo layout e apresentação da interface para o usuário.
+  - **Lógica:** Contém a programação que define o comportamento do aplicativo.
 
-Uma activity é o ponto de entrada dentro do aplicativo.
+### Criando a Activity
+- No ambiente de desenvolvimento, acesse a pasta Java dentro do pacote de produção.
+- Utilize o atalho (por exemplo, ALT + INSERT) para criar uma nova classe e nomeie-a como "MainActivity".
+- Implemente a classe fazendo-a herdar de Activity (ou de uma classe derivada, como AppCompatActivity) e importe as classes necessárias.
 
-Uma activity possui:
- 
-- View: Layout para usuário
-- Lógica: Programação
+### Configurando o AndroidManifest.xml
+- O arquivo AndroidManifest.xml é essencial para registrar as Activities, definir ícones, o nome do aplicativo e outras configurações.
+- Dentro da tag `<application>`, registre a MainActivity com um intent-filter que especifique a ação MAIN e a categoria LAUNCHER, indicando que ela é o ponto de entrada do aplicativo.
 
-### Criando Activity
+### Testando a Inicialização do App
+- A Activity possui um ciclo de vida que determina os momentos de criação, exibição e destruição.
+- Na MainActivity, no método `onCreate()`, é possível inserir comportamentos de teste, como exibir uma mensagem de boas-vindas (por exemplo, utilizando um Toast).
 
-Pasta Java > Pacote de prod > ALT + INSERT > Java Class > "MainActivity"
-
-Adicionamos o extends da Activity e importamos essa classe.
-
---
-
-Vamos agora para manifests > AndroidManifest
-
-No application é onde registramos as activitys, icones e nome do aplicativo.
-
-Nele vamos abrir a tag e adicionar o seguinte
-
-<activity android:name=".MainActivity">
-    <intent-filter>
-        <action android:name"android.intent.action.MAIN"
-        <category android:name="android.intent.category.LAUNCHER"
-    <intent-filter>
-</activity>
-
-### Testando inicialização do APP
-
-A activity possui um ciclo de vida. Esse ciclo indica o momento em que a activity é criada, por exemplo.
-
-Na nossa MainActivity.kt
-
-override fun onCreate(savedInstanceState: Bundle?)
-super.onCreate(savedInstanceState) 
-
-Toast.makeText(this, "Bem vindo", Toast.LENGTH_SHORT).show()
-
-### Adicionando views na activity.
-
-Vamos remover o toast e adidionar o seguinte:
-
-val view = View(this) <!-- aqui ele pede um argumento necessário. -->
-setContentView(view)
-
-<!-- Para comportamentos mais específcios, por exemplo. adicionar texto
-
-usamos a TextView. -->
-
-view.setText("Olá Mundo")
-
-### Layout - Adicionando tudo em um arquivo exclusivo.
-
-Todo o código e views são adicionadas em um local e são apenas carregadas na activity
-
-./res
-
-drawable: permite colocar imagens
-mipmap: versões de icones diferentes
-values: cores disponíveis configuradas pro app
-strings: valores em strings que não são modificados.
-themes: define qual o tema padrão e o tema escuro.
-
-### Criando o layout da activity
-
-ALT + INSERT
-
-android resource director
-selecionamos o layout.
-
-ALT + INSERT dnv
-
-layout resource file
-
-1. Primeiro colocamos o nome (padrão activity_main...)
-2. Root Element: padrão
-3. oK
-
-Arquivo criado.
-
-### Estilizando layout.
-
-Podemos clicar, arrastar e soltar.
-No text podemos modificar o texto (ao invés de fazer direto na activity)
-
-Voltando na activity vamos carregar o que fizemos no layout.
-
-setContentView(R.layout.activity_main) <!-- Carregando o layout -->
-<!-- Podemos apagar o texto adicionado anteriormente. -->
-
-### Evoluindo com layout
-
-Existe uma serie de regras para atender o que se espera.
-
-Todos os componentes são views: desde a constraint layout até o textview...
-
-1. Sempre teremos um elemento raiz.
-
-Uma view não pode ter outras views.
-Para que a gente consiga utilizar uma view que receba outras devemos usar a ViewGroup
-
-ConstraintLayout é uma viewGroup
+### Adicionando Views na Activity
+- Em vez de exibir apenas mensagens, é possível criar uma View e definir essa View como o conteúdo principal da Activity por meio do método `setContentView()`.
+- Para comportamentos específicos, por exemplo, exibir um texto, pode-se utilizar uma TextView e ajustar suas propriedades (como o texto) de forma programática.
 
 ![alt text](image-1.png)
 
-<!-- Constraint layout -->
+### Organização do Layout em Arquivo Exclusivo
+- Todo o código e as Views podem ser organizados em arquivos separados, que serão carregados na Activity.
+- Os diretórios de recursos do Android ajudam na organização:
+  - **drawable:** Armazena imagens.
+  - **mipmap:** Contém versões de ícones em diferentes resoluções.
+  - **values:** Define cores e outros valores fixos.
+  - **strings:** Armazena textos imutáveis.
+  - **themes:** Define o tema padrão e o tema escuro do aplicativo.
 
-#### Posicionando view
+### Criando o Layout da Activity
+- Utilize os recursos do Android Studio para criar um arquivo de layout:
+  - Crie um novo diretório de recurso para layouts, se necessário.
+  - Em seguida, crie um arquivo de layout (normalmente nomeado como `activity_main`) que defina a estrutura visual, começando por um elemento raiz.
 
-Podemos arrastar a view para onde desejarmos.
+### Estilizando o Layout
+- O layout pode ser estilizado tanto por meio de uma interface visual (arrastar e soltar componentes) quanto editando as propriedades dos componentes diretamente.
+- Para carregar o layout criado, na Activity utilize o método `setContentView()` referenciando o arquivo de layout.
 
-Qualquer view que não tenha regra e fique dentro de uma viewgroup (constraint) ele fica em vermelho.
+### Evoluindo com o Layout
+- Todos os componentes visuais são considerados Views, mas apenas um elemento pode servir como raiz do layout.
+- Para que um componente possa conter outras Views, é necessário que ele seja um ViewGroup (como o ConstraintLayout, por exemplo).
+- O posicionamento dos componentes pode ser ajustado definindo regras e constraints para evitar que elementos fiquem desalinhados, como ficar presos no topo sem espaçamento.
 
-#### Implementando namespace Layout
+### Implementando Namespaces no Layout
+- O namespace **app** é utilizado para definir atributos específicos dos componentes (por exemplo, constraints).
+- O namespace **tools** permite a definição de atributos que são visíveis apenas no preview, sem afetar a execução do aplicativo.
 
-Usar o método split no android studio, para ver o que acontece debaixo dos panos.
+### Propriedades de Layout
+- **match_parent:** Define que a View deve ocupar todo o espaço disponível do seu elemento pai.
+- **wrap_content:** Ajusta a View ao tamanho de seu conteúdo.
+- O uso de constraints (por exemplo, definir que uma View deve ficar abaixo de outra) garante um posicionamento adequado dos componentes.
+- A gestão de IDs dos componentes facilita a manutenção e refatoração do código, com ferramentas que atualizam os IDs automaticamente.
 
-Utilizamos o namespace app para chamar atributos específicos da View.
-
-Para apresentar o conteúdo apenas no preview, utilizamos o tools.
-
-android:text="Cesta de frutas"
-
-### Implementando Layout
-
-o match_parent cresce em relação ao tamanho do Posicionando
-
-o wrap_content cresce em relação ao conteudo
-
---
-
-Quando não houver nenhuma constraint ele sempre fica grudado no topo.
-
-para separar adicionamos o seguinte:
-
-app:layout_constraintTop_toBottomOf="@id/textView"
-
-para adicionar o id adicionamos o 
-
-1. android:id="@+id/textView"
-
---
-
-Quando se mudar algum ID utilizar atalho SHIFT F6 e ele renomeia em todos os pontos.
-
-### Aplicando margin
-
-Se trabalhamos com px ficamos sucessiveis a dispositivos variados. Podem apresentar diferenças.
-
-DP = Densidade de pixels
-
-significa que será uma unidade que fará um "pixel virtual". ou seja, ele calcula automaticamente pixels para se adaptar.
-
-### Aplicando textSize
-
-Para o texto usamos o SP para aumentar ou não o tamanho da fonte.
-
-É bem semelhante ao DP porém esse SP facilita algumas questões de acessibilidade.
+### Aplicando Margens e Tamanhos de Texto
+- Para definir margens de forma escalável entre diferentes dispositivos, utilize a unidade **DP** (densidade de pixels), que ajusta o tamanho conforme a densidade da tela.
+- Para o tamanho dos textos, utilize a unidade **SP** (scale-independent pixels), que é semelhante ao DP, mas também considera as configurações de acessibilidade, garantindo que o texto seja dimensionado de acordo com as preferências do usuário.
