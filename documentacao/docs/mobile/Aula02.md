@@ -1,12 +1,15 @@
 # Introdução à Linguagem Kotlin e Fundamentos do Android
 
 ## Kotlin
-Kotlin é uma linguagem moderna e concisa que roda na JVM e é oficialmente suportada pelo Android para o desenvolvimento de aplicativos. Ela combina características de programação funcional e orientada a objetos, oferecendo maior segurança contra **NullPointerException**, suporte a **corrotinas** para operações assíncronas e uma sintaxe mais clara em comparação ao Java.
+
+Kotlin é uma linguagem moderna que roda na **JVM** e é oficialmente suportada para o desenvolvimento de **aplicativos Android**. Combina características de **programação funcional** e **orientada a objetos**, oferecendo maior segurança contra **NullPointerException**, suporte a **corrotinas** para operações assíncronas e uma sintaxe mais concisa que o Java.
 
 ## Activity
-Uma **Activity** representa uma única tela do aplicativo e é responsável por interagir com o usuário. Cada Activity é uma classe que herda de `AppCompatActivity` ou `Activity` e segue o **ciclo de vida** gerenciado pelo sistema Android.
+
+Uma **Activity** representa uma única tela do aplicativo e é responsável pela interação com o usuário. Cada Activity é uma classe que herda de `AppCompatActivity` ou `Activity`, e segue o **ciclo de vida** gerenciado pelo sistema Android.
 
 ### Ciclo de Vida da Activity:
+
 - `onCreate()`: Inicializa a Activity.
 - `onStart()`: Torna a Activity visível.
 - `onResume()`: A Activity começa a interagir com o usuário.
@@ -15,9 +18,11 @@ Uma **Activity** representa uma única tela do aplicativo e é responsável por 
 - `onDestroy()`: A Activity é destruída e removida da memória.
 
 ## Layout
-Os layouts definem a interface gráfica da aplicação e podem ser criados de duas formas:
-1. **XML**: Arquivos na pasta `res/layout` descrevem a hierarquia de elementos visuais.
-2. **Jetpack Compose**: Um framework declarativo para criar UI diretamente em Kotlin.
+
+O layout define a interface gráfica da aplicação e pode ser criado de duas formas:
+
+1. **XML**: Arquivos localizados em `res/layout` descrevem a hierarquia de elementos visuais.
+2. **Jetpack Compose**: Framework declarativo para criar UIs diretamente em Kotlin.
 
 Exemplo de layout XML:
 ```xml
@@ -25,7 +30,7 @@ Exemplo de layout XML:
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,17 +40,11 @@ Exemplo de layout XML:
 
 ## Views
 
-Uma View é qualquer componente visível na tela, como:
+Uma **View** é qualquer componente visível na tela de um aplicativo, responsável pela interação com o usuário ou pela exibição de dados. Exemplos de Views incluem elementos que exibem texto, botões interativos, imagens e campos para entrada de dados.
 
-TextView → Exibe texto.
+### Manipulação de Views em Kotlin
 
-Button → Botão interativo.
-
-ImageView → Exibe imagens.
-
-EditText → Campo de entrada de texto.
-
-### Manipulação de Views em Kotlin:
+Em Kotlin, as Views são manipuladas por meio de métodos que buscam os componentes definidos na interface e alteram suas propriedades, como o texto exibido ou outras características visuais, de forma dinâmica durante a execução do aplicativo.
 
 ```xml
 val textView: TextView = findViewById(R.id.textView)
@@ -54,13 +53,10 @@ textView.text = "Novo Texto"
 
 ## AndroidManifest.xml
 
-O AndroidManifest.xml é um arquivo essencial que define:
-
-- Activities do app.
-
-- Permissões necessárias (ex.: acesso à câmera, internet).
-
-- Nome do pacote e informações básicas do aplicativo.
+O **AndroidManifest.xml** é um arquivo essencial em um projeto Android que define as configurações principais do aplicativo. Nele são especificadas:
+- As **Activities** que compõem o app.
+- As **permissões** necessárias, como acesso à internet ou à câmera.
+- Informações básicas como o nome do pacote e dados relevantes sobre o aplicativo.
 
 Exemplo:
 
@@ -84,22 +80,9 @@ Exemplo:
 </manifest>
 ```
 
-
 ## ViewGroups
 
-Um ViewGroup é um contêiner para organizar várias Views. Ele define como os elementos são dispostos na tela.
-
-### Principais ViewGroups:
-
-- LinearLayout → Organiza elementos em linha ou coluna.
-
-- RelativeLayout → Permite posicionamento relativo entre elementos.
-
-- ConstraintLayout → Mais flexível, recomendado para UIs complexas.
-
-- FrameLayout → Exibe uma única View por vez.
-
-Exemplo de LinearLayout:
+Um **ViewGroup** é um contêiner que organiza e agrupa várias Views na interface. Ele define a disposição dos elementos visuais e permite criar hierarquias complexas de componentes. Entre os principais ViewGroups estão aqueles que organizam elementos em linha ou coluna, aqueles que possibilitam posicionamento relativo e os que oferecem flexibilidade para layouts mais complexos.
 
 ```xml
 <LinearLayout
@@ -115,42 +98,20 @@ Exemplo de LinearLayout:
 </LinearLayout>
 ```
 
-## Construção de layout
+## Construção de Layout
 
-- Todos os componentes são views.
+Na construção de layouts para aplicativos Android:
+- Todos os elementos visuais são considerados **Views**.
+- A organização dos componentes é feita utilizando **ViewGroups**, que servem como contêiner para as Views.
+- Cada Activity deve ter apenas uma View raiz, que pode conter outros ViewGroups e Views para formar a estrutura completa da interface.
 
-- Pode haver somente uma view raiz. Aqui no caso ela não pode receber outras views.
+## O que aprendemos
 
-- Para isso devemos usar a viewGroup
-
-## O que aprendemos?
-
-Nesta aula, você aprendeu:
-
-- Adicionar Views na Activity
-
-Para apresentar o conteúdo visual, as Activities utilizam View. Para inserir Views na Activity precisamos sobrescrever métodos do ciclo de vida, como o de criação (onCreate()) e enviar a View como argumento do método setContentView().
-
-- Quais são os diretórios de recurso do Android
-
-Além de código fonte para Kotlin/Java, os projetos Android também disponibilizam outros diretórios de recursos, como drawable, mipmap e value etc.
-
-- Criar arquivos de layout
-
-Além de criar Views diretamente no código da Activity, somos capazes de criar arquivos de layout focados para apresentar o conteúdo visual da Activity.
-
-- Visualizar o layout pelo código fonte (XML) e pelo editor visual
-
-Diferente da visualização de um arquivo de código-fonte Kotlin ou Java, arquivos de layout do Android apresentam 3 possibilidades de visualização do layout: Code, Split e Design. A partir delas podemos acessar apenas o código, o código com preview ou o preview com ferramentas de editor visual, respectivamente.
-
-- Editar o layout e carregar na Activity
-
-Além de visualizações diferentes para arquivos de layout, o Android Studio permite a edição em ambas as visualizações. Também, podemos carregar o arquivo de layout a partir da classe R (que dá acesso ao conteúdo do res), enviando para o setContentView() o nome do layout.
-
-- Teoria da construção de layouts
-
-Ao construir layouts no Android, temos acesso a Views e ViewGroups que permitem construir uma árvore de Views.
-
-- Importância de utilizar ViewGroup na construção de layouts
-
-Para que seja possível criar uma árvore de Views, precisamos de ViewGroups que podem receber uma ou mais View/ViewGroup. Uma View não pode receber outra View/ViewGroup como filha.
+Nesta aula, foram abordados os seguintes conceitos:
+- **Adicionar Views na Activity:** As Activities são responsáveis por exibir o conteúdo visual e recebem as Views por meio do método de criação, onde a interface é definida.
+- **Diretórios de recursos do Android:** Além do código-fonte, o projeto organiza imagens, layouts, strings e outros recursos em diretórios específicos, facilitando o gerenciamento e a reutilização.
+- **Criar arquivos de layout:** A interface pode ser definida de forma organizada por meio de arquivos de layout, permitindo separar o design do código-fonte.
+- **Visualizar o layout no Android Studio:** O ambiente de desenvolvimento permite visualizar o layout de diferentes maneiras, como somente o código, uma combinação de código e preview ou um modo totalmente visual.
+- **Editar e carregar layouts nas Activities:** O layout pode ser editado e posteriormente carregado na Activity, integrando os recursos visuais ao código que define a lógica do aplicativo.
+- **Teoria da construção de layouts:** A construção de layouts envolve a criação de uma árvore de Views, onde os ViewGroups organizam os componentes individuais.
+- **Importância do ViewGroup:** Para que uma hierarquia de Views seja criada de forma organizada, é fundamental utilizar ViewGroups, já que uma View isolada não pode conter outras Views.
