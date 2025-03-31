@@ -105,3 +105,75 @@ O ViewHolder mantém referência aos elementos visuais (TextView do layout produ
 O método onBindViewHolder pega um Produto e preenche os elementos visuais.
 
 ![alt text](resume.png)
+
+#### ViewHolder
+
+##### O que é um ViewHolder no Android?
+
+No contexto de uma RecyclerView, o ViewHolder é uma classe que representa um item da lista e armazena referências para as Views desse item. Ele é usado para evitar chamadas repetitivas ao findViewById(), melhorando a performance ao reciclar as Views.
+
+##### Por que usar um ViewHolder?
+Quando você tem uma lista grande, criar e destruir Views repetidamente pode deixar o app lento. O ViewHolder armazena referências das Views, permitindo que a RecyclerView recicle os itens quando necessário, em vez de recriá-los do zero.
+
+##### Como funciona um ViewHolder?
+O onCreateViewHolder() cria a View para um item da lista.
+
+O onBindViewHolder() preenche a View com os dados corretos.
+
+O ViewHolder mantém referências para evitar recriação desnecessária.
+
+```xml
+class ListaProdutosAdapter (
+    private val context: Context,
+    private val produtos: List<Produto>
+) : RecyclerView.Adapter<ListaProdutosAdapter.ViewHolder>() {
+
+    // ViewHolder: Armazena as referências das Views
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        fun vincula(produto: Produto) {
+            val nome = itemView.findViewById<TextView>(R.id.nome)
+            nome.text = produto.nome
+
+            val descricao = itemView.findViewById<TextView>(R.id.descricao)
+            descricao.text = produto.descricao
+
+            val valor = itemView.findViewById<TextView>(R.id.valor)
+            valor.text = produto.valor.toPlainString()
+
+            val disponivel = itemView.findViewById<TextView>(R.id.disponivel)
+            disponivel.text = produto.disponivel
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val inflater = LayoutInflater.from(context)
+        val view = inflater.inflate(R.layout.product_item, parent, false)
+        return ViewHolder(view)
+    }
+
+    override fun getItemCount(): Int = produtos.size
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val produto = produtos[position]
+        holder.vincula(produto)  // Associa os dados ao ViewHolder
+    }
+}
+```
+
+#### Explicação do código
+
+✔ Criação do ViewHolder (class ViewHolder(view: View))
+
+- Recebe uma View e armazena referências para os elementos visuais.
+
+- O método vincula(produto: Produto) preenche os campos com os dados do produto.
+
+✔ Criação da View (onCreateViewHolder())
+
+- Aqui, o layout do item da lista (product_item.xml) é inflado e passa para o ViewHolder.
+
+✔ Vinculação de dados (onBindViewHolder())
+
+- O ViewHolder recebe os dados corretos para cada posição da lista.
+
+
