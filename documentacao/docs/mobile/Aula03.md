@@ -23,7 +23,7 @@
 - Em vez de exibir apenas mensagens, é possível criar uma View e definir essa View como o conteúdo principal da Activity por meio do método `setContentView()`.
 - Para comportamentos específicos, por exemplo, exibir um texto, pode-se utilizar uma TextView e ajustar suas propriedades (como o texto) de forma programática.
 
-![alt text](image-1.png)
+![alt text](imagem.png)
 
 ### Organização do Layout em Arquivo Exclusivo
 - Todo o código e as Views podem ser organizados em arquivos separados, que serão carregados na Activity.
