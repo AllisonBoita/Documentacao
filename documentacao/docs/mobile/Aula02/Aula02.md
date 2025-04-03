@@ -17,6 +17,8 @@ Uma **Activity** representa uma única tela do aplicativo e é responsável pela
 - `onStop()`: A Activity não está mais visível.
 - `onDestroy()`: A Activity é destruída e removida da memória.
 
+![alt text](image.png)
+
 ## Layout
 
 O layout define a interface gráfica da aplicação e pode ser criado de duas formas:
@@ -46,21 +48,30 @@ Uma **View** é qualquer componente visível na tela de um aplicativo, responsá
 
 Em Kotlin, as Views são manipuladas por meio de métodos que buscam os componentes definidos na interface e alteram suas propriedades, como o texto exibido ou outras características visuais, de forma dinâmica durante a execução do aplicativo.
 
-```xml
-val textView: TextView = findViewById(R.id.textView)
-textView.text = "Novo Texto"
+```kotlin
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Encontrando o TextView pelo ID e alterando o texto
+        val textView: TextView = findViewById(R.id.textView)
+        textView.text = "Texto alterado dinamicamente!"
+    }
+}
 ```
 
 ## AndroidManifest.xml
 
 O **AndroidManifest.xml** é um arquivo essencial em um projeto Android que define as configurações principais do aplicativo. Nele são especificadas:
+
 - As **Activities** que compõem o app.
 - As **permissões** necessárias, como acesso à internet ou à câmera.
 - Informações básicas como o nome do pacote e dados relevantes sobre o aplicativo.
 
 Exemplo:
 
-```xml
+```kotlin
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.meuapp">
     
@@ -101,6 +112,7 @@ Um **ViewGroup** é um contêiner que organiza e agrupa várias Views na interfa
 ## Construção de Layout
 
 Na construção de layouts para aplicativos Android:
+
 - Todos os elementos visuais são considerados **Views**.
 - A organização dos componentes é feita utilizando **ViewGroups**, que servem como contêiner para as Views.
 - Cada Activity deve ter apenas uma View raiz, que pode conter outros ViewGroups e Views para formar a estrutura completa da interface.
@@ -108,6 +120,7 @@ Na construção de layouts para aplicativos Android:
 ## O que aprendemos
 
 Nesta aula, foram abordados os seguintes conceitos:
+
 - **Adicionar Views na Activity:** As Activities são responsáveis por exibir o conteúdo visual e recebem as Views por meio do método de criação, onde a interface é definida.
 - **Diretórios de recursos do Android:** Além do código-fonte, o projeto organiza imagens, layouts, strings e outros recursos em diretórios específicos, facilitando o gerenciamento e a reutilização.
 - **Criar arquivos de layout:** A interface pode ser definida de forma organizada por meio de arquivos de layout, permitindo separar o design do código-fonte.

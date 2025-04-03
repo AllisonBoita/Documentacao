@@ -24,6 +24,15 @@ Diferente de muitos programas, no Android não temos um método `main` para roda
 
 As **Activities** são criadas a partir de uma classe Kotlin ou Java que herda da classe `Activity`. Para que o sistema Android reconheça a Activity, ela precisa ser registrada no arquivo de manifesto, o **AndroidManifest.xml**.
 
+```kotlin
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+```
+
 ### O que é o AVD Manager e como criar dispositivos virtuais (emuladores)
 
 Para executar um App Android, precisamos de um dispositivo que opere o Android. No nosso contexto, esse dispositivo pode ser um smartphone ou tablet. O Android Studio oferece o **AVD (Android Virtual Device) Manager**, que permite criar dispositivos virtuais, também conhecidos como **emuladores**, que rodam o sistema Android.
