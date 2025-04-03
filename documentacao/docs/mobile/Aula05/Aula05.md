@@ -26,11 +26,19 @@ Ao criar uma Activity com o AS, evitamos fazer manualmente tanto a criação da 
 
 - Diferenças entre bibliotecas do SDK do Android e AndroidX
 
+### O que é o AndroidX
+
+AndroidX é a evolução das Support Libraries, que antes precisavam ser mantidas separadamente do SDK oficial do Android. Agora, todas as bibliotecas são atualizadas independentemente da versão do Android e possuem um namespace unificado.
+
 Ao desenvolver para Android temos a necessidade de dar suporte para diferentes versões do sistema operacional, porém, para que isso seja possível, precisamos utilizar bibliotecas que são capazes de garantir a compatibilidade entre as versões do Android, no caso, as bibliotecas do AndroidX.
 
-- Projetos Android utilizam o Gradle como Build Tool
+### Projetos Android utilizam o Gradle como Build Tool
 
 Ao criar um projeto Android com o AS, é criado um projeto em Gradle com plugins, dependências e configurações para o ambiente do Android. Toda essa responsabilidade de build é do Gradle, que é uma Build Tool muito poderosa que, além de fazer as configurações gerais de build, também oferece suporte mais avançado como o projeto em multi-módulos.
+
+- build.gradle (Project): Responsável por configurações globais do projeto, como repositórios e versões do Gradle.
+
+- build.gradle (App/Módulo): Contém configurações específicas do aplicativo, incluindo dependências, versões do SDK, plugins e configurações de build.
 
 - Configurar arquivos de build para adicionar dependências no projeto
 
@@ -47,3 +55,10 @@ Ao utilizar EditText, podemos identificar qual campo ele representa a partir de 
 - Configurar ação de clique em View
 
 Além de escrever códigos que são executados apenas uma vez no onCreate() da Activity, podemos implementar listeners nas Views para adicionar códigos em ações, como o listener de clique em um Button.
+
+```kotlin
+val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
+botaoSalvar.setOnClickListener {
+    Toast.makeText(this, "Produto salvo!", Toast.LENGTH_SHORT).show()
+}
+```
