@@ -48,6 +48,8 @@ nav:
   - Mobile:    
       - 'Dia 01 - Mobile': ./mobile/Aula01/Aula01.md
       - 'Dia 02 - Mobile': ./mobile/Aula02/Aula02.md
+      - 'Dia 03 - Mobile': ./mobile/Aula03/Aula03.md
+      - 'Dia 04 - Mobile': ./mobile/Aula04/Aula04.md
 
 # Configurações adicionais (exemplo)
 markdown_extensions:

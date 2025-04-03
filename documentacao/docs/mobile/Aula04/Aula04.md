@@ -8,9 +8,13 @@ Para isso realizamos a bind entre a view e o layout.
 
 O recyclerView facilita a exibição de grandes conjuntos de dados. Entrega a performance independente da quantidade de itens.
 
+O RecyclerView sozinho não sabe como exibir os itens da lista. O Adapter é responsável por criar e preencher cada item da RecyclerView.
+
 ### Sobre
 
 os conceitos de Adapter, View e Model seguem o padrão MVVM (Model-View-ViewModel) ou MVC (Model-View-Controller). Vou explicar cada um com base no seu código:
+
+![alt text](image.png)
 
 #### Model (Modelo)
 
@@ -18,7 +22,7 @@ O Model representa os dados da aplicação. Ele geralmente contém apenas propri
 
 📌 Exemplo no seu código:
 
-```xml
+```kotlin
 class Produto (
     val nome: String,
     val descricao: String,
@@ -41,7 +45,7 @@ O layout XML (activity_main.xml e product_item.xml) e a RecyclerView na MainActi
 
 No código da MainActivity:
 
-```xml
+```kotlin
 val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 recyclerView.adapter = ListaProdutosAdapter(context = this, produtos = listOf( /* Lista de Produtos */ ))
 ```
@@ -52,7 +56,7 @@ A ListaProdutosAdapter vai preencher essa View com os dados dos produtos.
 
 No layout XML (exemplo product_item.xml):
 
-```xml
+```kotlin
 <TextView
     android:id="@+id/nome"
     android:layout_width="wrap_content"
@@ -70,7 +74,7 @@ O Adapter atua como um "ponte" entre os dados (Model) e a interface (View). Ele 
 
 A classe ListaProdutosAdapter:
 
-```xml
+```kotlin
 class ListaProdutosAdapter (
     private val context: Context,
     private val produtos: List<Produto>
@@ -97,14 +101,13 @@ class ListaProdutosAdapter (
     }
 }
 ```
+O LayoutInflater converte um arquivo XML de layout (product_item.xml) em uma View utilizável no código Kotlin.
 
 O Adapter recebe uma lista de Produto e os exibe na RecyclerView.
 
 O ViewHolder mantém referência aos elementos visuais (TextView do layout product_item.xml).
 
 O método onBindViewHolder pega um Produto e preenche os elementos visuais.
-
-![alt text](resume.png)
 
 #### ViewHolder
 
@@ -122,7 +125,7 @@ O onBindViewHolder() preenche a View com os dados corretos.
 
 O ViewHolder mantém referências para evitar recriação desnecessária.
 
-```xml
+```kotlin
 class ListaProdutosAdapter (
     private val context: Context,
     private val produtos: List<Produto>
