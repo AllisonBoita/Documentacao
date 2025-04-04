@@ -47,9 +47,15 @@ nav:
       - 'Dia 09 - Resumo': ./typescript/Dia09 - Resumo.md
   - Mobile:    
       - 'Dia 01 - Mobile': ./mobile/Aula01/Aula01.md
+      - 'Dia 01 - Mobile': ./mobile/Aula01/Passos.md
       - 'Dia 02 - Mobile': ./mobile/Aula02/Aula02.md
+      - 'Dia 02 - Mobile': ./mobile/Aula02/Passos.md
       - 'Dia 03 - Mobile': ./mobile/Aula03/Aula03.md
+      - 'Dia 03 - Mobile': ./mobile/Aula03/Passos.md
       - 'Dia 04 - Mobile': ./mobile/Aula04/Aula04.md
+      - 'Dia 05 - Mobile': ./mobile/Aula05/Aula05.md
+      - 'Dia 06 - Mobile': ./mobile/Aula06/Aula06.md
+      - 'Dia 07 - Mobile': ./mobile/Aula07/Aula07.md
 
 # Configurações adicionais (exemplo)
 markdown_extensions:

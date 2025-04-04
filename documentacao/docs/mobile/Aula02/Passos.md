@@ -1,4 +1,4 @@
-### Inserindo Views na Activity
+## Inserindo Views na Activity
 
 Dentro do onCreate() da Activity, crie um TextView e adicione uma mensagem de sua preferência, por exemplo, "Cesta de frutas".
 

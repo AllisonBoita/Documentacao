@@ -1,104 +1,21 @@
-## Acessando o formulário
+## Nesta aula, você aprendeu:
 
-Modifique o layout da lista de produtos e adicione o FloatingActionButton. Para isso, vá na aba de design, procure ou filtre por FloatingActionButton, segure e arraste até a tela do layout.
+- Implementar um FAB
 
-Ao fazer essa ação, o AS deve apresentar a tela para escolher o recurso para representar o ícone do FAB (FloatingActionButton).
+O FAB é um botão bastante presente em diversos Apps para realizar as ações primárias da tela, como o cadastro de produtos.
 
-Na tela para escolher o recurso, clique na cruz superior à esquerda para apresentar outras opções de recursos e, entre elas, utilize o Vector Asset, que é a opção que cria uma imagem capaz de se adaptar a diferentes tamanhos de tela.
+- Adicionar ícones com o AS
 
-Em seguida, mantenha a opção Clip Art selecionada no campo Asset Type, então, clique no botão para escolher o ícone no campo Clip Art.
+Ao utilizar componentes que utilizam recursos como imagens ou ícone, podemos utilizar o AS para utilizar recursos já existentes no projeto ou adicionar novos recursos a partir do seu assistente que permite adicionar drawables, assets de imagens ou vetoriais.
 
-Ao abrir uma janela nova com vários ícones, filtre por add e escolha o ícone da cruz. Nomeie o ícone. Você pode colocar, por exemplo, ic_action_add ou o nome que preferir. Clique em Next e depois Finish.
+- Salvar e buscar objetos por meio do DAO
 
-Então, selecione o ícone adicionado para o FAB. Em seguida, posicione o FAB na parte inferior à direita da tela configurando as constraints de fim e baixo.
+Para que seja possível salvar objetos e buscá-los a partir de qualquer Activity, utilizamos o padrão de projeto DAO (Data Access Object ou Objecto de Acesso a Dados), que é uma classe responsável por abstrair a forma como os dados são salvos e recuperados pelas entidades do Android.
 
-Após configurar o FAB no layout, na MainActivity, faça o binding para pegar o FAB e configure o listener de clique para abrir a Activity de formulário ao clicar no FAB. Para isso, crie uma instância de Intent(), envie a MainActivity como Context e a classe FormularioProdutoActivity como referência, e então chame o método startActivity().
+- O ciclo de vida de Activity
 
-Teste o App e confira se ao clicar no FAB apresenta o formulário da Activity.
+Além do ciclo de criação,as Activities do Android possuem outros ciclos que são acionados em diferentes momentos para indicar a situação atual da Activity, como o resumo que identifica que a Activity está em execução ou o pause para a Activity não está mais visível.
 
-## Salvando produtos
+- Finalização do fluxo de salvar e buscar produtos
 
-Configure o código da FormularioProdutoActivity para salvar produtos ao clicar no botão Salvar.
-
-Para isso, implemente o DAO para produto, criando a classe ProdutoDao e adicionando os comportamentos para salvar e buscar todos os produtos.
-
-```kotlin
-class ProdutoDao {
-
-    companion object {
-        private val produtos = mutableListOf<Produto>()
-    }
-
-    fun adiciona(produto: Produto) {
-        produtos.add(produto)
-    }
-
-    fun buscaTodos(): List<Produto> {
-        return produtos.toList()
-    }
-}
-```
-
-
-Então, utilize uma lista como estrutura de dados para salvar os produtos, depois de adicionar os métodos e implementá-los com base na lista interna.
-
-Vá ao código de listener de clique do botão salvar e crie uma instância do DAO. Salve o produto criado, busque os produtos e, então, confira se ele é apresentado via log.
-
-Por fim, ajuste o código da MainActivity para que o RecyclerView apresente a lista de produtos a partir dos produtos do DAO.
-
-Para esta atividade, apenas confira se o produto que foi enviado para o DAO é apresentado no log que busca a lista de produtos. Como a implementação atual não deve apresentar os produtos na lista de produtos, portanto, não precisa validar esse comportamento.
-
-## Carregando os produtos do DAO no RecyclerView
-
-Ajuste o código para que o App consiga apresentar os produtos do DAO no RecyclerView. Para isso, primeiro finalize a Activity de formulário de produto, após salvar o produto no DAO chamando o método finish().
-
-
-
-Em seguida, modifique o DAO para que salve os produtos em um lista via Companion Object para manter as informações disponíveis independente da instância.
-
-Por fim, sobrescreva o método onResume() da MainActivity e migre todo o código de binding e configuração do RecyclerView. Então, teste o App e confira se, ao salvar um produto pelo formulário, o App volta para a lista de produtos e apresenta o produto salvo. Faça esse mesmo teste mais de uma vez para garantir que tudo está funcionando como esperado.
-
-```kotlin
-override fun onResume() {
-    super.onResume()
-
-    val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-    val dao = ProdutoDao()
-    val produtos = dao.buscaTodos()
-
-    recyclerView.adapter = ListaProdutosAdapter(produtos)
-}
-```
-
-No ListaProdutosAdapter.kt, certifique-se de que os produtos são exibidos corretamente:
-
-```kotlin
-class ListaProdutosAdapter(private val produtos: List<Produto>) :
-    RecyclerView.Adapter<ListaProdutosAdapter.ViewHolder>() {
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun vincula(produto: Produto) {
-            val nome = itemView.findViewById<TextView>(R.id.item_nome)
-            val descricao = itemView.findViewById<TextView>(R.id.item_descricao)
-            val preco = itemView.findViewById<TextView>(R.id.item_preco)
-
-            nome.text = produto.nome
-            descricao.text = produto.descricao
-            preco.text = produto.preco.toPlainString()
-        }
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_produto, parent, false)
-        return ViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val produto = produtos[position]
-        holder.vincula(produto)
-    }
-
-    override fun getItemCount(): Int = produtos.size
-}
-```
+Para finalizar o fluxo de salvar e buscar produtos, notamos a necessidade de um padrão para manter os dados e o uso consciente da sobrescrita de ciclos da Activity, como o onResume() para sempre executar um código cada vez que a Activity está em execução, ou seja, é apresentada.

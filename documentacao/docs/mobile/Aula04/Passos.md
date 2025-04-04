@@ -51,7 +51,8 @@ override fun onBindViewHolder(
 
 override fun getItemCount(): Int {
       TODO("Not yet implemented")
-}Copiar código
+}
+
 Aproveite esse momento para migrar o pacote da MainActivity para que fique em br.com.alura.orgs.ui.activity. Com essa mudança, ajuste o AndroidManifest.xml para adicionar a nova localização da MainActivity.
 
 Em seguida, receba uma lista de produtos no construtor primário da ListaProdutosAdapter para que seja possível implementar os métodos getItemCount() e o onBindViewHolder(). Aproveite para criar a classe Produto. Ela deve ter as seguintes properties:
