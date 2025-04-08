@@ -1,122 +1,81 @@
-# Recap
+## Utilizando a ImageView no layout do produto
 
-## 🧠 Técnicas e Tecnologias no Projeto
+Adicione uma ImageView no layout do produto e configure o layout para apresentar o seguinte aspecto visual no preview:
 
-### Kotlin
+![alt text](image-1.png)
 
-**O que é?** Kotlin é uma linguagem moderna usada para desenvolver aplicativos Android. É concisa, segura e interoperável com Java.
+Layout do item do produto com a ImageView à esquerda e o conteúdo em texto do produto à direita
 
-**Exemplo prático:** Em vez de escrever muitas linhas de código para definir uma variável, você pode simplesmente fazer:
+Ao adicionar a ImageView, considere o uso de algum sample data de imagem para apresentar uma imagem no preview. Em vídeo, foi utilizado o @tools:sample/backgrounds/scenic.
 
-```kotlin
-    val nome = "João"
-```
+O grande detalhe desta implementação é modificar a constraint endToStart da ImageView com um dos TextViews, por exemplo, o de nome. Após escolher o TextView para configurar a constraint, modifique a constraint startToEnd do TextView escolhido para se ajustar à ImageView. Ao realizar esse ajuste, o preview deve apresentar essa ligação entre a ImageView e TextView:
 
-**Na vida real:** Kotlin economiza tempo e reduz erros. Imagine escrever uma carta: Kotlin é como usar um modelo pronto, enquanto Java seria escrever tudo do zero.
+![alt text](image.png)
 
-### Activities
+Essa característica visual é conhecida como Chain no ConstraintLayout. Chains são criadas cada vez que Views, dentro do ConstraintLayout, são ligadas no mesmo eixo de maneira bidirecional, como o fim da ImageView no início do TextView e o início do TextView no fim do ImageView.
 
-**O que é?** Uma Activity representa uma tela do app. É como uma "página" de um livro.
+Após fazer esse ajuste, defina a largura e altura da ImageView com o valor 100dp e configure o tipo de escala com o valor centerCrop para preencher o container da ImageView com a imagem.
 
-**Exemplo prático:** A tela de login é uma Activity. Quando você clica em "Entrar", abre uma nova Activity (como a tela principal do app).
+Por fim, defina um valor na propriedade app:srcCompat para apresentar um conteúdo na ImageView antes de testar o app. Caso você não tenha um drawable de amostra, como foi apresentado em vídeo, pode aplicar recursos do Android, como é o caso de cores, usando a @android:color/holo_purple.
 
-**Na vida real:** Como trocar de canal na TV. Cada canal (Activity) mostra um conteúdo diferente.
+Após aplicar todos os ajustes, rode o app e salve um produto. Então, confira se apresenta a ImageView no design de um item de produto.
 
-### Layout para Activities
+### Para saber mais: Chains do ConstraintLayout
 
-**O que é?** É o visual da sua Activity, definido em XML. Determina onde ficam os botões, textos, imagens, etc.
+Durante a atividade para adicionar a ImageView, foi apresentada a técnica de Chain no ConstraintLayout. Além de permitir uma flexibilidade de alinhamento entre as Views, Chains possuem alguns comportamentos específicos que podem ser úteis na construção de layout, por exemplo, a distribuição proporcional entre as Views configuradas em Chain. Para mais detalhes sobre Chains e suas possibilidades, você pode conferir a [documentação.](https://developer.android.com/training/constraint-layout#constrain-chain)
 
-**Exemplo prático:** Um arquivo XML define que o botão de “Login” vai estar centralizado e abaixo do campo de senha.
+## Faça como eu fiz: Adicionando imagens no projeto
 
-**Na vida real:** É como desenhar um projeto de casa antes de construí-la.
+Adicione uma imagem que representa um produto no projeto Android. Para isso, adicione imagens alternativas para diferentes densidades de telas. Caso você tenha habilidades com edição de imagem, você pode usar a documentação como um suporte para ajustar a imagem desejada com as medidas necessárias.
 
-### ConstraintLayout
+Caso contrário, você pode usar algum aplicativo alternativo que faça esse ajuste automaticamente, como o [NativeScript Image Builder](https://nsimage.brosteins.com/) (usado no vídeo) ou, se preferir, pode baixar as imagens.
 
-**O que é?** Um tipo de layout poderoso que permite posicionar elementos de forma flexível e responsiva.
+Para adicionar as imagens no projeto, você precisa copiar todas as imagens (que estão dentro dos diretórios de drawable com os DPIs diferentes) e colar em res. O Android Studio deve apresentar uma mensagem indicando onde vai colocar as imagens, então, certifique-se de que serão colocadas em res e clique em “ok”. A partir desse momento, as imagens estarão acessíveis a partir de res/drawable.
 
-**Exemplo prático:** Você pode dizer que um botão deve ficar sempre no centro da tela, independente do tamanho da tela.
+Por fim, modifique a propriedade app:srcCompat da ImageView do item de produto e confira se, ao testar, o app apresenta a imagem esperada após a criação de um produto.
 
-**Na vida real:** Como usar ímãs em um quadro branco: você pode posicionar os itens como quiser, com conexões entre eles.
+A partir desta atividade, salve um produto no DAO de produtos para facilitar o teste do visual dos produtos em lista.
 
-### TextView
+## Faça como eu fiz: Configurando fontes no projeto
 
-**O que é?** Um componente usado para mostrar texto na tela.
+Adicione as fontes Montserrat Regular e Bold. Para isso você pode considerar duas opções:
 
-**Exemplo prático:** “Bem-vindo, usuário!” é exibido com um TextView.
+Utilizar o editor visual e filtrar por fontFamily > clicar no combobox e escolher a opção More Fonts...
+Clicar na aba Resource Manager > acessar a aba Font > clicar no ícone de cruz > More Fonts...
+Seguindo um desses procedimentos deve dar acesso à janela para adicionar fontes, então, filtre por Montserrat e selecione a fonte.
 
-**Na vida real:** Como uma etiqueta em um produto. Só serve para exibir, não para escrever.
+Como primeira adição, escolha o preview com o valor Regular, mantenha o nome da fonte como montserrat e a criação de uma fonte baixável (Create downloadable font), por fim, clique em OK. Faça o mesmo procedimento e adicione a versão Bold da Montserrat. Além do preview, a diferença é que o nome dessa fonte será montserrat_bold.
 
-### RecyclerView
+Após adicionar a fonte, modifique a propriedade android:fontFamily do nome do produto para usar a fonte montserrat, então, aplique também um tamanho do texto (android:textSize) de 20sp e um estilo de texto (android:textStyle) negrito (bold).
 
-**O que é?** Um componente usado para mostrar listas (roláveis e performáticas).
+## Faça como eu fiz: Ajustando informações do produto
 
-**Exemplo prático:** Lista de mensagens no WhatsApp, ou lista de produtos em um app de compras.
+Modifique as demais informações do item do produto conforme a proposta de implementação. Para isso, faça:
 
-**a vida real:** Como uma esteira que só mostra o que está passando no momento, e guarda o resto para economizar espaço.
+Ajuste das fontes da descrição e valor para que sejam montserrat
+Modifique o tamanho e o estilo de texto:
+Descrição 14sp
+Valor 18sp com negrito
+Adicione reticências (android:ellipsize) no nome e na descrição no final (end) do texto
+Limite a quantidade de linhas do nome e da descrição para o máximo de 1 linha
+Aplique margem no valor, 8dp no topo e 16dp em baixo
+Modifique a cor do valor para que seja verde (você pode usar @android:color/holo_green_dark)
+Ajustes a altura da ImageView para fazer match_constraint (0dp), então, configure o eixo y (top e bottom) com o pai
+Após aplicar as mudanças, também considere o uso do lorem ipsum com o sample data @tools:sample/lorem/random para testar, via preview, a reticência com um conteúdo extenso. Com todos os ajustes aplicados, o preview deve apresentar o seguinte resultado:
 
-### EditText
+![alt text](image-2.png)
 
-**O que é?** Um campo para o usuário digitar informações.
+Por fim, rode o app e insira um produto com nome e descrição com texto o suficiente para ultrapassar mais de uma linha de conteúdo. Então, verifique se apresenta o comportamento esperado.
 
-**Exemplo prático:** Campo para digitar o e-mail ou senha.
+## O que aprendemos?
 
-**Na vida real:** Como preencher um formulário de papel com caneta.
+Nesta aula, aprendemos:
 
-### Button
-
-**O que é?** Um botão que o usuário pode clicar para fazer algo.
-
-**Exemplo prático:** Botão “Enviar” para mandar uma mensagem.
-
-**a vida real:** Como um botão de elevador – você aperta e algo acontece.
-
-### Binding de View
-
-**O que é?** Uma técnica para acessar elementos da interface no Kotlin sem precisar usar findViewById.
-
-**Exemplo prático:**
-
-```kotlin
-binding.textViewTitulo.text = "Olá!"
-```
-
-**Na vida real:** É como ter um controle remoto com o nome de cada botão, em vez de ficar procurando.
-
-### Listener de Clique
-
-**O que é?** Um evento que ocorre quando o usuário clica em um botão ou outro elemento.
-
-**Exemplo prático:**
-
-```kotin
-buttonLogin.setOnClickListener {
-    // Código ao clicar
-}
-```
-
-**Na vida real:** Como instalar uma campainha: quando alguém aperta, você recebe um sinal (evento).
-
-### AndroidX
-
-**O que é?** Um conjunto moderno de bibliotecas do Android, com melhorias em relação às versões antigas.
-
-**Exemplo prático:** androidx.appcompat.app.AppCompatActivity em vez de android.support.v7.app.AppCompatActivity.
-
-**Na vida real:** Como uma versão nova de um carro – mais eficiente, compatível e atualizada.
-
-### AppCompatActivity
-
-**O que é?** Uma Activity que oferece suporte a versões antigas do Android com funcionalidades modernas.
-
-**Exemplo prático:** Permite usar temas escuros, barras de ação e outras funções modernas mesmo em dispositivos antigos.
-
-**Na vida real:** Como um adaptador de tomada que funciona tanto em tomadas novas quanto antigas.
-
-### Refatoração de Código
-
-**O que é?** Melhorar o código sem mudar o que ele faz.
-
-**xemplo prático:** Extrair trechos repetidos para uma função reutilizável.
-
-**Na vida real:** Como reorganizar a estante de livros para ficar mais fácil de encontrar algo, sem mudar o conteúdo dos livros.
-
+Adicionar imagens com ImageView
+Além de Views que lidam com texto (TextView ou EditText), o framework do Android oferece a ImageView que lida com conteúdos drawables ou cores.
+Oferecer drawables alternativos
+Ao oferecer um drawable para um projeto Android, como é o caso de uma imagem em png. O recomendado é oferecer diferentes versões da mesma imagem para dar um suporte melhor para diferentes DPIs.
+Configurar e utilizar fontes no projeto
+Além de utilizar as fontes padrão de um projeto Android, também temos a capacidade de utilizar fontes diferentes na personalização de apps, sejam fontes adicionadas diretamente no projeto ou baixáveis.
+Utilizar sample data em imagens e texto
+Ao construir layouts, podemos utilizar conteúdo exclusivo do preview do Android Studio, o sample data. A partir dele, temos a capacidade de reutilizar conteúdos de texto ou imagens para simular um conteúdo real, como é o caso de avatares, cenas ou até mesmo textos aleatórios com lorem ipsum.
