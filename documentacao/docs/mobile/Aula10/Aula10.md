@@ -41,3 +41,37 @@ Com esse ajuste, deve apresentar a Guideline no preview:
 Após modificar a Guideline, ajuste a constraint de fim da ImageView para o ínicio da Guideline, então, teste o App e confira se apresenta o comportamento esperado.
 
 Você pode usar o Layout Validation para verificar se funciona como esperado.
+
+## O finish
+
+### 2. O que acontece quando você chama finish()?
+
+Sim, ao clicar no ícone e chamar finish(), você está apenas encerrando a Activity atual. Mas o que isso significa "por baixo dos panos"?
+
+Explicando:
+
+O Android trabalha com uma pilha de Activities, chamada de Back Stack.
+
+Quando você abre uma nova Activity (ex: FormProdutoActivity), ela é empilhada em cima da anterior (ListaProdutoActivity).
+
+Ao chamar finish():
+
+O Android remove a Activity atual do topo da pilha.
+
+E a Activity anterior automaticamente volta a ser exibida, sem precisar ser recriada (a não ser que tenha sido destruída por falta de memória).
+
+Em termos práticos:
+
+ANTES:
+
+[ListaProdutoActivity] <- já estava aberta
+[FormProdutoActivity]  <- aberta por cima
+
+DEPOIS DE finish():
+
+[ListaProdutoActivity] <- visível novamente
+Alternativa: onBackPressedDispatcher.onBackPressed()
+Outra forma de simular exatamente o comportamento do botão "voltar" físico é:
+
+onBackPressedDispatcher.onBackPressed()
+Mas, como finish() faz isso para a maioria dos casos, você está bem servido com ele.
