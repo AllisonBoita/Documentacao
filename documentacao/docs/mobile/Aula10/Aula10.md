@@ -25,3 +25,19 @@ Ajuste o código do ViewHolder do ListaProdutosAdapter. para que ele formate o v
 A partir da variável criada, chame o método format() enviando o valor do produto como argumento, e então, atribua o retorno do format() para uma variável que vai representar o valor formatado e atribue essa variável para a property text do EditText do valor.
 
 Por fim, extraia o código para um método que recebe um BigDecimal (valor do produto) e retorne a String que representa o valor formatado para a moeda brasileira, e então, rode o App e confira se apresenta o valor formatado como esperado. Durante o teste, adicione um produto novo com um valor alto, por exemplo, 10 casas ou mais, para verificar se apresenta a formatação esperada.
+
+## Faça como eu fiz: Implementando o Guideline no layout
+
+Adicione a Guideline no layout do item de produto para ajustar a largura da ImageView com 30% do container (ConstraintLayout). Para isso adicione os seguintes atributos para a Guideline:
+
+android:orientation com valor vertical
+app:layout_constraintGuide_percent com valor 0.3
+Lembre-se de adicionar um id no Guideline para ajustar as constraints
+
+Com esse ajuste, deve apresentar a Guideline no preview:
+
+![alt text](image-1.png)
+
+Após modificar a Guideline, ajuste a constraint de fim da ImageView para o ínicio da Guideline, então, teste o App e confira se apresenta o comportamento esperado.
+
+Você pode usar o Layout Validation para verificar se funciona como esperado.
