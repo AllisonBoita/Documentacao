@@ -75,3 +75,27 @@ Outra forma de simular exatamente o comportamento do botão "voltar" físico é:
 
 onBackPressedDispatcher.onBackPressed()
 Mas, como finish() faz isso para a maioria dos casos, você está bem servido com ele.
+
+## Faça como eu fiz: Definindo porcentagem de largura
+
+Conforme apresentado em vídeo, modifique a ImageView para manter a largura de 30% de acordo com o container (ConstraintLayout), porém, utilize o weight ou percent pra isso.
+
+Fique à vontade para decidir a opção de sua preferência, porém, recomendamos o uso do percent por conta da facilidade de uso, pois não exige o uso de outra View (como a Guideline) ou a necessidade de Chain.
+
+Após essa atividade, apenas teste o App e confira se ainda apresenta o mesmo aspecto visual de 30% de largura na ImageView com base no container.
+
+## Para saber mais: Chains do ConstraintLayout
+
+Durante o uso do weight, foi apresentada a técnica de Chain no ConstraintLayout. Além de permitir uma flexibilidade de alinhamento entre as Views, Chains possuem alguns comportamentos específicos que podem ser úteis na construção de layout, por exemplo, a distribuição proporcional tem estilos que variam entre:
+
+- Espalhar (spread): espalha views proporcionalmente (comportamento padrão).
+
+- Espalha dentro (spread inside): as views das extremidades são fixas as constraints de ponta (nesse caso o start e o end no parent) e as mais internas mantém o espalhamento padrão do espalhar (spread).
+
+- Pesado (weighted): assim como visto em vídeo, mantém a proporção com base na soma dos pesos.
+
+- Empacotado (packed): junta todas as views de acordo com o bias, nesse exemplo, o padrão de 50%.
+
+![alt text](image-2.png)
+
+Para mais detalhes sobre Chains e suas possibilidades, você pode conferir esta página da [documentação](https://developer.android.com/develop/ui/views/layout/constraint-layout?hl=pt-br#constrain-chain).
