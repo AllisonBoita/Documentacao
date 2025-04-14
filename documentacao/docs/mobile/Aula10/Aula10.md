@@ -99,3 +99,20 @@ Durante o uso do weight, foi apresentada a técnica de Chain no ConstraintLayout
 ![alt text](image-2.png)
 
 Para mais detalhes sobre Chains e suas possibilidades, você pode conferir esta página da [documentação](https://developer.android.com/develop/ui/views/layout/constraint-layout?hl=pt-br#constrain-chain).
+
+## Nesta aula, aprendemos:
+
+- Componentes do Material Design
+
+Além dos componentes do SDK do Android ou de bibliotecas do AndroidX, também temos a possibilidade de usar componentes do Material Design, como o Card e até mesmo o Floating Action Button.
+
+- Formatar números em moeda
+
+Em casos que precisamos modificar o formato de valores numéricos, podemos utilizar APIs do Java para isso, como é o caso do NumberFormat, e depois atribuir para a View que precisa exibir o conteúdo formatado.
+
+- Guideline do ConstraintLayout
+
+O ConstraintLayout oferece objetos auxiliares Helper Objects, como o Guideline, que servem apenas para auxiliar a construção do layout, portanto, ficam invisíveis no layout mas permitem a configuração de constraints.
+
+- Ajuste de medidas em porcentagem no ConstraintLayout
+Além de valores fixos para altura ou largura, com o Constraint Layout podemos utilizar pesos ou porcentagens para definir medidas flexíveis, que modificam os seus tamanhos de acordo com a configuração de medidas do dispositivo.
