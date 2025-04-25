@@ -56,6 +56,9 @@ nav:
       - 'Dia 05 - Mobile': ./mobile/Aula05/Aula05.md
       - 'Dia 06 - Mobile': ./mobile/Aula06/Aula06.md
       - 'Dia 07 - Mobile': ./mobile/Aula07/Aula07.md
+      - 'Dia 08 - Mobile': ./mobile/Aula08/Aula08.md
+      - 'Dia 09 - Mobile': ./mobile/Aula09/Aula09.md
+      - 'Dia 10 - Mobile': ./mobile/Aula10/Aula10.md
 
 # Configurações adicionais (exemplo)
 markdown_extensions:
