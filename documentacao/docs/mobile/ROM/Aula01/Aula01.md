@@ -31,3 +31,29 @@ Compile-time verification of SQL queries: Verificação de consultas SQL em temp
 Convenience annotations that minimize repetitive and error-prone boilerplate code: Anotações convenientes que minimizam códigos repetitivos e sujeitos a erros;
 Streamlined database migration paths: Caminhos simplificados para fazer migração de banco de dados.
 Não se preocupe com as mudanças! Mesmo que não visto em vídeo, esses destaques por conta da linguagem serão abordados no decorrer do curso.
+
+
+## Faça como eu fiz: Adicionando o Room
+
+Na página da documentação, você terá acesso aos scripts necessários para instalar o Room no seu projeto Android. Em vídeo, utilizamos as seguintes dependências:
+
+```kotlin
+    dependencies {
+        def room_version = "2.3.0"
+
+        implementation "androidx.room:room-runtime:$room_version"
+        kapt "androidx.room:room-compiler:$room_version"
+
+        // demais dependências
+    }
+```
+
+Sugerimos que utilize a mesma versão apresentada na aula para que tenha a mesma experiência apresentada em curso. Fique à vontade para usar a versão mais recente da documentação, porém, saiba que existe a chance de você encontrar problemas não esperados.
+
+Após adicionar a biblioteca, adicione o plugin do kapt ('kotlin-kapt') para configurar o annotation processing do Kotlin. Em seguida, sincronize o projeto, confira se o processo de build é realizado com sucesso e tente acessar APIs do Room, como, por exemplo, a anotação androidx.room.Entity.
+
+### Para saber mais: Sobre Annotation Processing
+
+Como vimos, o Room utiliza a técnica de Annotation Processing (em português, processamento de anotações) para gerar o código fonte de baixo nível que se comunica com o SQLite a partir de metadados (anotações). Como o objetivo do curso é reutilizar esse recurso disponível em Java desde a versão 5, optamos por não apresentar mais detalhes sobre essa técnica.
+
+Caso você tenha interesse em conhecer mais sobre Annotation Processing, como, por exemplo, quando usar e suas motivações, sugerimos a leitura [deste artigo da Mindworks (em inglês).](https://blog.mindorks.com/android-annotation-processing-tutorial-part-1-a-practical-approach/)
